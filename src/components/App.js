@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 const API = 'http://localhost:3001/sushis';
 
 function App() {
-  const [sushis, setSushis] = useState('');
+  const [sushis, setSushis] = useState([]);
 
   useEffect(() => {
     const fetchSushis = async () => {
@@ -25,6 +25,7 @@ function App() {
     };
     fetchSushis();
   }, []);
+
   return (
     <div className='app'>
       <SushiContainer sushis={sushis} />

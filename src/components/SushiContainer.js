@@ -1,10 +1,17 @@
-import React from "react";
-import MoreButton from "./MoreButton";
+import React from 'react';
+import MoreButton from './MoreButton';
+import Sushi from './Sushi';
+import { useState } from 'react';
 
-function SushiContainer({sushis}) {
+function SushiContainer({ sushis }) {
   return (
-    <div className="belt">
-      {/* Render Sushi components here! */}
+    <div className='belt'>
+      {sushis.map((sushi) => (
+        <Sushi
+          key={sushi.id}
+          sushi={sushi}
+        />
+      ))}
       <MoreButton />
     </div>
   );
