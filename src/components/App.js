@@ -29,7 +29,7 @@ function App() {
   return (
     <div className='app'>
       <SushiContainer sushis={sushis} />
-      <Table />
+      <Table sushis={sushis} />
     </div>
   );
 }
